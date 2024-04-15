@@ -43,25 +43,47 @@ function submitInput(e) {
         .then(data => {
             console.log(data.items[0]);
 
-            // Avatar
-            const avatarUrl = data.items[0].avatar_url;
-            // login
-            const user = data.items[0].login;
-            // followers
-            const followerCount = data.items[0].followers;
-            // following
-            const followingCount = data.items[0].following;
+            if (data.items.length === 0){
+                document.getElementById('avatar-box').innerHTML = "";
+                document.getElementById('username').innerHTML = "No user found";
+                document.getElementById('followers').innerHTML = "0";
+                document.getElementById('following').innerHTML = "0";
+                document.getElementById('repos').innerHTML = "0";
+            } else{
 
+                
+                // Avatar
+                const avatarUrl = data.items[0].avatar_url;
+                // login
+                const user = data.items[0].login;
 
-            // add link to the image 
+            // count the number of following
+            const followingCount = data.items[0].following_url.length;
+
+            // Count the number of followers
+            const followerCount = data.items[0].followers_url.length; 
+            // console.log("Number of followers:", followerCount);
+
+            // count repos 
+            const reposCount = data.items[0].repos_url.length;
+
+            
+            // add user link to the image 
             document.getElementById('avatar-box').innerHTML = `<a target="_blank" href="https://www.github.com/${searchInput}"> <img src="${avatarUrl}"/> </a>`;
-
-            // add link to the username also 
+            
+            // add user link to the username  
             document.getElementById('username').innerHTML = `<a target="_blank" href="https://www.github.com/${searchInput}"> ${user}`;
-
+            
+            // view followers number 
             document.getElementById('followers').innerHTML = `${followerCount}`;
 
+            // view following numbers 
             document.getElementById('following').innerHTML = `${followingCount}`;
+            
+            // view repos count 
+            document.getElementById('repos').innerHTML = `${reposCount}`;
+               
+        }  
         })
         .catch(error => {
             console.error('There was a problem with your fetch operation:', error);
