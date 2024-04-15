@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./images/github-favicon2.png" type="image/x-icon">
+    <title>Github Viewer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <div class="container" id="id-container">
+        <div class="github-icon">
+            <img src="./images/github-favicon2.png" alt="">
+        </div>
+        <h3>SearchDev...</h3>
+    </div>
+
+    <form action="" class="user-form" autocomplete="off" id="form">
+        <input type="text" placeholder="Search for a developer" id="input">
+        <button type="submit">Search developer</button>
+    </form>
+
+    <main id="display-user">
+        <div class="avatar-box" id="avatar-box">
+        </div>
+        <div class="info-box" id="user-info">
+            <p class="username" id="username"></p>
+            <br>
+            <!-- <p class="email" ></p> -->
+            <br>
+            <br>
+            <div class="rff">
+                <div>
+                    <p>Repos</p>
+                    <p id="Repos"></p>
+                </div>
+                <div>
+                    <p>Followers</p>
+                    <p id="followers"></p>
+                </div>
+                <div>
+                    <p>Following</p>
+                    <p id="following"></p>
+                </div>
+                <!-- <p class="no-of-commits" id="no-of-commits"></p> -->
+
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js"></script>
+</body>
+</html>

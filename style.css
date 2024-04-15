@@ -1,0 +1,154 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New';
+}
+p{
+    font-size: 16px;
+}
+.user-form {
+    width: 70%;
+    height: 10vh;
+    background-color: black;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+input {
+    width: 70%;
+    height: 40px;
+    border-radius: 50px;
+    border: 1px solid #f3eeee;
+    outline: none;
+    font-size: 20px;
+    padding: 20px;
+    margin: auto;
+}
+
+
+main {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 2px solid #ebdbdb;
+    box-shadow: 2px 2px 2px 0px  rgba(33, 31, 31, 0.605);
+    padding-left: 20px;
+}
+
+.avatar-box {
+    width: 30vh;
+    height: 30vh;
+    background-color: #5b58584d;
+    border-radius: 50%;
+    /* border: 1px solid #f3eeee; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-box img{
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    border: 1px solid #0e0d0d;
+}
+
+
+
+
+
+.info-box {
+    width: 70%;
+    height: 45vh;
+    background-color: rgb(37, 37, 37);
+    padding: 30px;
+    border-radius: 10px;
+}
+
+.info-box .username {
+    width: 50%;
+    height: 5vh;
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.info-box .email {
+    width: 70%;
+    height: 5vh;
+    background-color: white;
+    text-align: center;
+    padding: 4px;
+    font-size: 20px;
+    border-radius: 10px;
+}
+
+.rff {
+    width: 100%;
+    height: 10vh;
+    background-color: #790909;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.rff div{
+    width: 30%;
+    height: 8vh;
+    border-radius: 10px;
+    background-color: #ffffff;
+    text-align: center;
+    padding-top: 5px;
+}
+
+
+
+/* header */
+.container {
+    width: 60%;
+    height: 20vh;
+    padding-top: 30px;
+    margin: auto;
+}
+
+h3 {
+    text-align: center;
+    color: #c60101;
+    padding-top: 12px;
+}
+
+.github-icon {
+    width: 50px;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.search-container {
+    margin-top: 20px;
+    width: 100%;
+    height: 50px;
+    background-color: #ffffff;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+
+button {
+    /* width: 10%; */
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 50px;
+    border: 1px solid #f3eeee;
+    
+}
