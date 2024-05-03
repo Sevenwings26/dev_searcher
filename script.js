@@ -10,20 +10,6 @@ displayScreen.style.borderRadius = "20px";
 displayScreen.style.boxShadow = "20px";
 
 
-
-// let userAvatar = document.createElement('div');
-// userAvatar.id = 'avatar';
-
-// displayScreen.appendChild(userAvatar);
-
-// let avatar = document.getElementById('avatar')
-// avatar.style.width = '300px'
-// avatar.style.height = '300px';
-// avatar.style.backgroundColor = 'white'
-// avatar.style.borderRadius = '100%'
-
-
-
 const form = document.getElementById('form');
 
 form.addEventListener('submit', submitInput);
@@ -41,7 +27,7 @@ function submitInput(e) {
             return response.json();
         })
         .then(data => {
-            console.log(data.items[0]);
+            console.log({data});
 
             if (data.items.length === 0){
                 document.getElementById('avatar-box').innerHTML = "";
@@ -54,11 +40,13 @@ function submitInput(e) {
                 
                 // Avatar
                 const avatarUrl = data.items[0].avatar_url;
+                console.log({avatarUrl});
                 // login
                 const user = data.items[0].login;
-
+                console.log({user});
             // count the number of following
             const followingCount = data.items[0].following_url.length;
+            console.log({followingCount});
 
             // Count the number of followers
             const followerCount = data.items[0].followers_url.length; 
